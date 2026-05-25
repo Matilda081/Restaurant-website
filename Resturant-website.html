@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="css">
+  <meta name="responsiveness" content="My Reciepe website">
+  <meta name="author" content="Chisom Eze">
+  <meta http-equiv="refresh" content="10">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <title>Document</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(to right, rgb(255, 255, 255) rgb(254, 215, 173));
+    }
+
+    header {
+      height: 60px;
+      width: 100%;
+      background-color: #222121;
+      color: #fff;
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav ul li {
+      list-style-type: none;
+      display: inline;
+      margin-right: 20px;
+      font-weight: 500;
+    }
+
+    .logo {
+      font-size: 24px;
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      gap: 20px;
+      padding: 0;
+    }
+
+    .nav-list li {
+      margin: 0;
+      padding: 10px 0;
+      display: block;
+    }
+
+    .hero {
+      width: 100%;
+      background: url(./foodcover.jpeg);
+      height: 400px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .search-box {
+      max-width: 550px;
+      margin: 15px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: red;
+    }
+
+    .search-box input {
+      width: 70%;
+      padding: 10px;
+      outline: none;
+      border-radius: 5px 0 0 5px;
+      border: none;
+      font-size: 1rem;
+      border-radius: 1px solid rgb(245, 37, 9);
+    }
+
+    .search-box button {
+      padding: 10px 20px;
+      outline: none;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      font-size: 1rem;
+      background: rgb(245, 37, 9);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .reciepes {
+      padding: 50px;
+    }
+
+    .reciepes h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .reciepe-section {
+      width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 30px;
+    }
+
+    .reciepe-card {
+      background: #fff;
+      margin: 30px 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .reciepe-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .reciepe-card h2 {
+      font-size: 22px;
+      padding: 20px;
+    }
+
+    .reciepe-card p {
+      font-size: 18px;
+      padding: 20px;
+    }
+
+    .reciepe-card a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background: #333;
+      color: #fff;
+      padding: 15px 0;
+      cursor: pointer;
+      margin-top: auto;
+    }
+
+    footer {
+      background: #333;
+      padding: 20px 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      padding: 20px;
+      text-align: right;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media(max-width:1024px){
+      body {
+        background-color: aquamarine;
+      }
+      .reciepe-section {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .nav-list {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .nav-list li {
+        display: block;
+        margin: 0;
+      }
+      .menu-icon {
+        display: none;
+      }
+    }
+
+    @media(max-width:764px){
+      body {
+        background-color: palevioletred;
+      }
+      .menu-icon{
+        display: block;
+      }
+      .nav-list{
+        display: none;
+      }
+      .reciepe-section {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width:640px) {
+      body {
+        background-color: skyblue;
+      }
+      .reciepe-section {
+        grid-template-columns: 1fr;
+      }
+        .menu-icon{
+        display: block;
+      }
+      .nav-list{
+        display: none;
+      }
+
+    }
+    
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="container">
+      <h1 class="logo">Delicious Recipe</h1>
+      <nav>
+        <div class="menu-icon">
+          <span class="material-symbols-outlined">menu</span>
+        </div>
+        <ul class="nav-list">
+          <li>Home</li>
+          <li>About</li>
+          <li>Recipe</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-section">
+      <h2>Welcome to my Recipe Collections!!</h2>
+      <p>Search Recipe and eat what makes your soul happy</p>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Search Reciepe">
+        <button type="submit">Search</button>    
+       </form>
+    </div>
+  </section>
+
+  <section class="recipes">
+    <h1>Featured Recipe</h1>
+    <div class="reciepe-section">
+      <div class="reciepe-card">
+        <img src="jollof rice.jpeg" alt="">
+        <h2>Jollof Rice</h2>
+        <a href="#">View reciepe</a>
+      </div>
+      <div class="reciepe-card">
+        <img src="fried rice.jpeg" alt="">
+        <h2>Fried Rice</h2>
+        <a href="#">View reciepe</a>
+      </div>
+      <div class="reciepe-card">
+        <img src="abacha.jpeg" alt="">
+        <h2>Abacha</h2>
+        <a href="#">View reciepe</a>
+      </div>
+      <div class="reciepe-card">
+        <img src="afang soup.jpeg" alt="">
+        <h2>Afang Soup</h2>
+        <a href="#">View reciepe</a>
+      </div>
+      <div class="reciepe-card">
+        <img src="oha soup.jpeg" alt="">
+        <h2>Oha Soup</h2>
+        <a href="#">View reciepe</a>
+      </div>
+      <div class="reciepe-card">
+        <img src="freshfish peppersoup.jpeg" alt="">
+        <h2>FreshFish PepperSoup</h2>
+        <a href="#">View reciepe</a>
+      </div>
+      <div class="reciepe-card">
+        <img src="egusi soup.jpeg" alt="">
+        <h2>Egusi Soup</h2>
+        <a href="#">View reciepe</a>
+      </div>
+      <div class="reciepe-card">
+        <img src="ewedu soup.jpeg" alt="">
+        <h2>Ewedu Soup</h2>
+        <a href="#">View reciepe</a>
+      </div>
+      <div class="reciepe-card">
+        <img src="indomie.jpeg" alt="">
+        <h2>Indomie</h2>
+        <a href="#">View reciepe</a>
+      </div>
+      <div class="reciepe-card">
+        <img src="roasted plantain.jpeg" alt="">
+        <h2>Roasted Plantain</h2>
+        <a href="#">View reciepe</a>
+      </div>
+      <div class="reciepe-card">
+        <img src="stir fry sauce.jpeg" alt="">
+        <h2>Stir Fry sauce</h2>
+        <a href="#">View reciepe</a>
+      </div>
+      <div class="reciepe-card">
+        <img src="vegetable soup.jpeg" alt="">
+        <h2>Vegetable Soup</h2>
+        <a href="#">View reciepe</a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div>
+      <p>&copy; 2026  Good food, Good mind</p>
+    </div>
+  </footer>
+</body>
+</html>
